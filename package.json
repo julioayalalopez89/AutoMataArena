@@ -1,0 +1,18 @@
+{
+  "name": "automataarena",
+  "version": "1.0.0",
+  "description": "AutoMataArena is the real-time combat engine of the AutoMataSoul universe.\r It enables remote-controlled and AI-driven roboces to move, interact,\r and fight over the internet with low-latency synchronization.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.19.0"
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMataArena Control</title>
+</head>
+<body>
+  <h1>AutoMataArena</h1>
+
+  <button onclick="send('forward')">⬆️ Forward</button>
+  <button onclick="send('left')">⬅️ Left</button>
+  <button onclick="send('right')">➡️ Right</button>
+  <button onclick="send('attack')">⚔️ Attack</button>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:8080");
+
+    ws.onopen = () => {
+      console.log("Connected to arena");
+    };
+
+    function send(cmd) {
+      ws.send(cmd);
+    }
+  </script>
+</body>
+</html>
