@@ -2,25 +2,20 @@
 <html>
 <head>
   <title>AutoMataArena Control</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>AutoMataArena</h1>
 
-  <button onclick="send('forward')">⬆️ Forward</button>
-  <button onclick="send('left')">⬅️ Left</button>
-  <button onclick="send('right')">➡️ Right</button>
-  <button onclick="send('attack')">⚔️ Attack</button>
+  <div id="controls">
+    <button id="forward">⬆️ Forward</button>
+    <button id="left">⬅️ Left</button>
+    <button id="right">➡️ Right</button>
+    <button id="attack">⚔️ Attack</button>
+  </div>
 
-  <script>
-    const ws = new WebSocket("ws://localhost:8080");
+  <div id="status">Connecting...</div>
 
-    ws.onopen = () => {
-      console.log("Connected to arena");
-    };
-
-    function send(cmd) {
-      ws.send(cmd);
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

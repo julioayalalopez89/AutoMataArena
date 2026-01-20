@@ -1,0 +1,14 @@
+<script>
+  const ws = new WebSocket("ws://localhost:3000");
+
+  ws.onopen = () => {
+    console.log("Connected to WebSocket");
+    ws.send(JSON.stringify({
+      type: "COMMAND",
+      target: "robot_1",
+      action: "FORWARD"
+    }));
+  };
+
+  ws.onmessage = (msg) => console.log("Received:", msg.data);
+</script>
